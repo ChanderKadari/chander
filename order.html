@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>th{
+        text-align:left;
+        
+    
+    }
+    
+    body{
+    font-size: 20pt;
+    
+    }
+    
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+    
+      div {
+        text-align: center;
+        border-style: solid;
+        margin-left: 300px;
+        width:60%
+    }
+    #alignment{
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <script >function checkmob(){
+        var str=document.getElementById("mblenmb").value;
+var ptr=/^07[072568][0-9]{7}$/;
+
+var chck=ptr.test(str);
+
+if(!chck)
+alert("Moblie Number is Incorrect");
+}
+var tot=parseInt(quantities[i])*parseInt(prices[i]);
+document.write("<td>"+tot+"</td>");
+fTot+=tot;
+document.write("</tr>");
+}
+document.write("<tr><td colspan=\"3\"><strong>TOTAL</strong></td><td>"+fTot+"</td><tr>");
+strt(2);	
+}
+function createtbl(x){		
+document.write("<td>"+x+"</td>");
+}
+
+function strt(n){
+if(n==1){
+document.writeln("<h1 style=\"text-align:center;\">The Bill</h1>");
+document.writeln("<table width=\"90%\" border=\"1\">");
+document.writeln("<tr><th>ITEMS</th><th>QUANTITY</th><th>PRICE</th><th></th></tr>");
+}
+	else
+	document.write("</table>");
+}
+
+function createTot(x,y){
+var tot=parseInt(x)*parseInt(y);
+document.write("<td>"+tot+"</td>");
+}
+</script>
+</head>
+<body>
+    <body >  
+        <div> 
+        <h2>==========Price list==========</h2>
+        <table width="40%" id="alignment" > 
+            <tr>  
+            <th>Food Item</th> 
+            <th></th>
+            <th>Price(Rs.)</th>
+            </tr> 
+            <tr>
+            <td>cheeseburger</td> 
+            <td> - </td>
+            <td>150.00</td> 
+            </tr> 
+            <tr>
+            <td>chickenburger</td>
+            <td> - </td> 
+            <td>100.00</td> 
+            </tr>
+            <tr> 
+            <td>salad</td>
+            <td> - </td>  
+            <td>50.00</td>
+            </tr> 
+            <tr>  
+            <td>Drinks </td>
+            <td> - </td> 
+            <td>20.00</td> 
+            </tr>  
+            <tr>
+            <td>Dessert</td>
+            <td> - </td> 
+            <td>50.00</td>
+            </tr>
+            </table>
+            <h>FIT Food - Order Form</h1>
+                <table style="background-color:aquamarine;margin-left: 100px;">  <tr>
+                <td>Branch : </td>
+                <td> 
+                <select> 
+                <option>--Select Item--</option>
+                <option>Galle</option>
+                <option>Colombo</option> 
+                </select>
+                </td> 
+                </tr>
+                <tr>
+                <td>User name:</td>
+                <td>
+                <input type="text" >
+                </td>
+                </tr>
+                <tr><td>Mobile: </td>
+                <td><input type="text" id="mblenmb" onfocusout="checkmob()"></td></tr> 
+                </table>
+                <br>
+                <form name="tblform" >
+                    <table width="80%"  id="alignment" >
+                    <tr>
+                    <th>Food Item</th>
+                    <th> </th>
+                    <th>Quantity</th>
+                    <th>Price</th> 
+                    </tr>
+                    <tr> 
+                    <td>Item 1:</td> 
+                    <td>
+                    <select id="item1">
+                    <option value="1">--Select Item--</option> 
+                    <option value="cheeseburger">cheeseburger</option> 
+                    <option value="chickenburger">chickenburger</option> 
+                    <option value="salad">salad</option> 
+                    <option value="Drinks">Drinks</option> 
+                    <option value="salad ">salad </option> 
+                    </select>
+                    </td> 
+                    <td><input type="number" value="0" id="q1"></td>
+                    <td><input type="text" id="p1"></td>
+                    </tr>   
+                    <tr>
+                    <td>Item 2:</td>
+                    <td>
+                    <select id="item2"> 
+                    <option value="1">--Select Item--</option> 
+                    <option value="cheeseburger">cheeseburger</option> 
+                    <option value="chickenburger">chickenburger</option> 
+                    <option value="salad">salad</option>  
+                    <option value="Drinks">Drinks</option>
+                    <option value="Dessert ">Dessert</option>  
+                    </select>
+                    </td>
+                    
+                    <td><input type="number" value="0" id="q4"></td>
+                    <td><input type="text"  id="p4"></td> 
+                    </tr>    
+                    <tr>
+                    <td></td> 
+                    <td></td> 
+                    <td><input type="submit" class="button" value="Create Bill" onclick=createBill()></td>
+                    <td><input type="reset" class="button" value="Clear"></td>
+                    </tr>
+                    </table>
+                    </form>
+</body>
+</html>
